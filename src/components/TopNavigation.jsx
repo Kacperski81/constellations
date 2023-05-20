@@ -33,7 +33,7 @@ export default function TopNavigation() {
             Home
           </NavLinkElement>
           <NavLinkElement
-            to="/galaxy"
+            to="/constellation"
             activeclassname="active"
           >
             Explore

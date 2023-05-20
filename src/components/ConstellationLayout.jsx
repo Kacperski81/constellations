@@ -67,7 +67,7 @@ const ActiveNavLink = styled(NavLink)`
   }
 `
 
-export default function GalaxyLayout() {
+export default function ConstellationLayout() {
   const { state, dispatch } = useContext(MobileMenuContext);
   const [searchParams, setSearchParams] = useSearchParams();
 

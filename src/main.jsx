@@ -10,18 +10,18 @@ import {
 } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Galaxies from './pages/Galaxies';
-import GalaxyLayout from './components/GalaxyLayout';
-import Info from './pages/Galaxy/Info';
-import Map from './pages/Galaxy/Map';
-import NasaPod from './pages/Galaxy/NasaPod';
+import Constellations from './pages/Constellations';
+import ConstellationLayout from './components/ConstellationLayout';
+import Info from './pages/Constellation/Info';
+import Map from './pages/Constellation/Map';
+import NasaPod from './pages/Constellation/NasaPod';
 import { MobileMenuProvider } from './contexts/mobileMenuContext';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />}>
     <Route index element={<Home />} />
     
-      <Route path="galaxy" element={<GalaxyLayout />}>
+      <Route path="constellation" element={<ConstellationLayout />}>
         <Route index element={<Info />} />
         <Route path="nasaPod" element={<NasaPod />} />
       </Route>

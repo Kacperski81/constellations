@@ -1,4 +1,4 @@
-import GalaxyLayout from "../components/GalaxyLayout";
+import ConstellationLayout from "../components/ConstellationLayout";
 
 export default function Galaxies() {
 
@@ -15,7 +15,7 @@ export default function Galaxies() {
 
     return (
         <>
-            <GalaxyLayout />
+            <ConstellationLayout />
         </>
     )
 }

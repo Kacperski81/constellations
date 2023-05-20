@@ -48,7 +48,7 @@ export default function Home() {
                 start your journey and uncover the secrets of each constellation.
             </P>
             <Button>
-                <Link style={{flexGrow: 1}} to="/galaxy">Explore</Link>
+                <Link style={{flexGrow: 1}} to="/constellation">Explore</Link>
             </Button>
         </HomeWrapper>
     )
