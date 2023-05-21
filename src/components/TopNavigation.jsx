@@ -11,6 +11,7 @@ const NavContainer = styled.nav`
 
 const NavLinkElement = styled(NavLink)`
   padding: 0 1em;
+  font-size: 1.2rem;
 
   &:first-child {
     margin-right: .5em;

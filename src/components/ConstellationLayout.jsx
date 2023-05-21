@@ -24,50 +24,62 @@ const Form = styled.form`
 
   & > *:first-child {
     text-align: center;
-    background-color: transparent;
+    background-color: #000;
     font-size: 1rem;
-    padding: .3em 0;
+    padding: 1em 0;
     margin-bottom: .5em;
     color: #fff;
     border: none;
   }
 
   & > *:last-child {
-    padding: .3em 0;
+    padding: 1em 0;
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: .5em;
   }
 `
 
+const Select = styled.select`
+  font-size: 1rem;
+`
+
 const Option = styled.option`
   background: black;
+  font-size: 1rem;
 `
 
 const Nav = styled.nav`
   display: flex;
-  background-color: #000;
+  // background-color: #000;
 `
 
 const ActiveNavLink = styled(NavLink)`
   padding: 0;
   flex-grow: 1;
+  flex-basis: 50%;
   text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: normal;
+  font-size: .8rem;
   color: #f7f5fb;
   padding: .4em 0;
   margin: 0;
-  border-bottom: 1px solid #fff;
-
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(0,0,0,0.7);
 
   &.active {
-    border: 1px solid #fff;
+    border: 1px solid rgba(255,255,255,0.2);
     border-bottom: none;
+    color: #f7f5fb;
+    font-weight: bold;
+    background-color: #000;
+    // transition: font-size .1s ease-in-out;
+    font-size: .9rem;
   }
 `
 
 export default function ConstellationLayout() {
+  console.log('constellation length '+ constellations.length)
   const { state, dispatch } = useContext(MobileMenuContext);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -94,11 +106,11 @@ export default function ConstellationLayout() {
     <GalaxyLayoutWrapper>
       <FormAndLinkWrapper isMenuOpen={state.isMenuOpen}>
         <Form>
-          <select name="constellations" onChange={handleSubmit}>
+          <Select name="constellations" onChange={handleSubmit}>
             {constellations.map(item => (
               <Option key={item.label} value={item.label}>{item.label}</Option>
             ))}
-          </select>
+          </Select>
         </Form>
         <Nav>
           <ActiveNavLink

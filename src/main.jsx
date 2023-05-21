@@ -10,10 +10,8 @@ import {
 } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Constellations from './pages/Constellations';
 import ConstellationLayout from './components/ConstellationLayout';
 import Info from './pages/Constellation/Info';
-import Map from './pages/Constellation/Map';
 import NasaPod from './pages/Constellation/NasaPod';
 import { MobileMenuProvider } from './contexts/mobileMenuContext';
 

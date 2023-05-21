@@ -19,7 +19,8 @@ const HeaderElement = styled.header`
 
 const Title = styled.h1`
     // font-family: 'Roboto Mono', monospace;
-    justify-self: center;
+    justify-self: flex-start;
+    font-size: 2rem;
 `
 
 export default function Header() {
